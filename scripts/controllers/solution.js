@@ -9,7 +9,9 @@
  */
 angular
   .module('flixstockApp')
-  .controller('SolutionCtrl', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll) {
+  .controller('SolutionCtrl', ['$scope', '$location', '$anchorScroll',
+        function($scope, $location, $anchorScroll) {
+
     $scope.slides = [
 	    {
         title: 'A Bigger Catalog',

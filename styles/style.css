@@ -13,9 +13,7 @@
 /**  - Mav Pills                                            **/
 /**  - Nestor Main Menu                                     **/
 /** Breadcrumbs                                             **/
-/** Demo                                               **/
-/**  - Demo Page                                       **/
-/**  - Demo Single                                     **/
+/** Profile                                                 **/
 /**  - Our Work 1                                           **/
 /** Blog                                                    **/
 /**  - Blog Single                                          **/
@@ -181,24 +179,53 @@ img{
   padding-top:120px;
 }
 
-.padding-bottom-large{
-  padding-bottom:80px;
+.padding-top-80{
+  padding-top:80px;
+}
+
+@media (max-width: 991px) {
+  .padding-top-large{
+    padding-top:80px;
+  }
 }
 
 .page {
-    height: 100vh;
+  height: 100vh;
 }
     
 .page:nth-child(2n){
     background-color: #99c;
 }
 
+#top-content-region .imagepoll-overlay {
+  background: rgba(42,197,238,.5);
+}
+
+.turing {
+ background-color: white !important;
+ overflow: visible !important;
+}
+
+.turing .imagepoll-image img {
+  width: auto;
+  max-height: 400px;
+}
+
+.turing .imagepoll-image {
+  text-align: center;
+}
 
 
 
 /*************************************************************/
 /*********************** Generic Styles **********************/
 /*************************************************************/
+
+.bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 
 .no-margin        { margin: 0; }
 .no-margin-left   { margin-left: 0; }
@@ -855,7 +882,7 @@ header {
   }
 
   .solution li:not(.active) > a {
-    color: darkblue;
+    color: palegoldenrod;
   }
 
   .clients, .partners, .demo{
@@ -1204,72 +1231,9 @@ header {
 
 
 /*************************************************************/
-/************************* Demo *************************/
+/************************* Work *************************/
 /*************************************************************/
 
-/** demo Page **/
-.demo-item {
-  margin-top: 40px;
-  bottom: 40px;
-}
-
-.demo-image {
-  position: relative;
-}
-
-.demo-image img {
-  width: 100%;
-}
-
-.demo-intro {
-}
-
-.demo-overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0;
-  -webkit-transition: all 0.3s ease-out;
-     -moz-transition: all 0.3s ease-out;
-       -o-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
-}
-
-.demo-image:hover .demo-overlay {
-  opacity: 1;
-}
-
-.demo-overlay .demo-title {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  text-align: center;
-  margin-top: -4em;
-  color: palegoldenrod;
-  -webkit-transition: all 0.3s ease-out;
-     -moz-transition: all 0.3s ease-out;
-       -o-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
-}
-
-.demo-overlay .demo-title > .icon {
-  font-size: 8em;
-  color: inherit;
-}
-
-.demo-overlay .demo-title > h6 {
-  color: inherit;
-}
-
-
-
-/** demo Single **/
-.demo-single-image {
-  width: 100%;
-}
 
 /** Our Work 1 **/
 .our-work-1-item {
