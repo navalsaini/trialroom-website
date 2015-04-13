@@ -46,9 +46,11 @@ angular
       });
     }
     
-    $scope.pass = 0;
-    $scope.correct = 0;
-    $scope.wrong = 0;
+    var pass = 0;
+    var correct = 0;
+    var wrong = 0;
+
+    $scope.percentage = 0;
     $scope.showCounter = false;
 
     // demo first page
@@ -69,7 +71,7 @@ angular
 
     $scope.onSkip = function(idx){
       var test = $scope.tests[idx];
-      $scope.pass++;
+      pass++;
       $scope.doNextPage();
     };
 
@@ -77,9 +79,9 @@ angular
       var test = $scope.tests[idx];
       test.isCorrect = isCorrect; 
       if(isCorrect){
-        $scope.correct++; 
+        correct++; 
       }else{
-        $scope.wrong++;
+        wrong++;
       }
       $scope.doNextPage(1000);
     };
@@ -96,6 +98,7 @@ angular
         if(idx == 0){
           $scope.showCounter = false;
         }else if(idx === total+1){
+          $scope.percentage = Math.round(100 * correct / (correct+wrong+pass));
           $scope.showCounter = false;
         }else{
           $scope.indexStr = idx + " of " + total;

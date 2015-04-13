@@ -2,7 +2,7 @@
 
 angular
   .module('flixstockApp')
-  .directive('imagepoll', function(){
+  .directive('imagepoll', [ '$window', function($window){
     return {
       restrict : 'E',
       replace: true,
@@ -12,23 +12,22 @@ angular
         var ion_correct_answer = "icon ion-checkmark-round ff-correct";
         var isAnswered = false;
         var correctMessage = "You caught us";
-        
+
         var data = JSON.parse($attr.data);
         var onPoll = $scope[$attr.onPoll];
-        
+
         $scope.leftSrc = data.left;
         $scope.rightSrc = data.right;
         $scope.overlayLeftIconCls = ion_unknown;
         $scope.overlayRightIconCls = ion_unknown;
-        $scope.overlayLeftMessage = "Flixstock";
-        $scope.overlayRightMessage = "Flixstock";
+        $scope.overlayLeftMessage = "enlarge";
+        $scope.overlayRightMessage = "enlarge";
 
         $scope._select = function(isLeft){
           if(isAnswered){
             return;
           }
           isAnswered = true;
-
           var isCorrect = (data.isLeft === isLeft);
           if(data.isLeft){
             $scope.overlayLeftIconCls = ion_correct_answer;
@@ -49,7 +48,15 @@ angular
           if(onPoll){
             onPoll(data.idx, isCorrect, false);
           }
-        };
+        }
+
+        $scope._enlarge = function(event, isLeft){
+          event.preventDefault();
+          event.stopPropagation();
+          var link = (isLeft) ? (data.left) : (data.right);
+          var target = (isLeft) ? '_leftblank' : '_rightblank';
+          $window.open(link, target);
+        }
       }
     };
-  });
+  }]);

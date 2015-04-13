@@ -18,6 +18,7 @@
 }
 
 .imagepoll-overlay {
+  cursor: pointer;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -78,6 +79,16 @@
   width: auto;
   display: inline-block;
 }
+
+.imagepoll-overlay .imagepoll-title > h6 > a {
+  color: inherit;
+}
+
+.imagepoll-overlay .imagepoll-title > h6 > a:hover {
+  font-weight: bolder;
+  color: inherit;
+}
+
 
 .ff-correct {
   color: green;
