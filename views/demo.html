@@ -1,4 +1,4 @@
-<fullpage page-class="page" ng-controller="DemoCtrl" on-scroll='changePage' scroll=false >
+<fullpage page-class="page" ng-controller="DemoCtrl" on-scroll='onPageChange' scroll=false >
 
 <section id="top-content-region" class="page turing padding-top-large">
 
@@ -15,21 +15,41 @@
       </div>
       <div class="top-content-right col-xs-12 col-md-6 text-right text-center-sm margin-top-sm-10">
         <div class="text-center">
-          <a ng-click="nextPage()" class="btn btn-primary">Test us now !</a>
-          <a ng-click="showDemo()" class="btn btn-primary" style="border:0;">Request a demo</a>
+          <a ng-click="startTest()" class="btn btn-primary">Test us now !</a>
+          <a ng-click="requestDemo()" class="btn btn-primary" style="border:0;">Request a demo</a>
         </div> <!-- /row -->
       </div>
     </div>
 
-    <imagepoll
-      image-left-src="{{demoLImg}}" 
-      image-right-src="{{demoRImg}}"
-      on-left-click="startTest()"
-      on-right-click="startTest()"
-      overlay-icon-cls="icon ion-close-round"
-      overlay-message="Bot or not"
-      />
-      
+    <div class="row imagepoll-intro">
+      <div class="col-xs-12">
+        <div class="row">
+          <div class="imagepoll-image col-xs-6">
+            <img class="img-responsive" ng-src="{{demoHeaderLImg}}"/>
+            <div class="imagepoll-overlay" ng-click="startTest(1000)" >
+              <div class="imagepoll-icon">
+                  <i class="{{overlayIconCls}}"></i>
+              </div> 
+              <div class="imagepoll-title">
+                  <h6>{{overlayMessage}}</h6>
+              </div> 
+            </div>
+          </div> <!-- /imagepoll-image -->
+          <div class="imagepoll-image col-xs-6">
+            <img class="img-responsive" ng-src="{{demoHeaderRImg}}" />
+            <div class="imagepoll-overlay" ng-click="startTest(1000)">
+              <div class="imagepoll-icon">
+                  <i class="{{overlayIconCls}}"></i>
+              </div> 
+              <div class="imagepoll-title">
+                  <h6>{{overlayMessage}}</h6>
+              </div> 
+            </div>
+          </div> <!-- /imagepoll-image -->
+        </div>
+      </div>
+    </div>
+
   </div>
 
 </section>
@@ -37,18 +57,47 @@
 <section class="page turing padding-top-large" ng-repeat="test in tests">
 
   <div class="container col-xs-10 col-xs-offset-1">
-    
     <imagepoll
-      image-left-src="{{test.left}}"
-      image-right-src="{{test.right}}"
-      on-left-click="pickLeft(text.idx)"
-      on-right-click="pickRight(test.idx)"
-      overlay-icon-cls="icon ion-close-round"
-      />
-      
+      data="{{test}}"
+      on-poll="onPoll"
+    />
     <div class="page-title row padding-top-20 padding-bottom-20 text-center">
-      <a ng-click="nextPage()" class="btn btn-primary">Pass eye test<a>
+      <a ng-click="pickImage(test.idx, null, true)" class="btn btn-primary">Pass eye test<a>
     </div>
   </div>
+
+</section>
+
+<section class="page turing padding-top-large" ng-repeat="test in tests">
+<div class="container">
+<div class="row col-xs-12">
+  <div class="col-xs-6">
+    <div class="page-title row padding-top-20 padding-bottom-20">
+      <div class="text-center">
+        <div>
+            <h1>Your Final Scorecard.</h1>
+        </div>
+      </div>
+    </div>
+    <div class="page-title row padding-top-20 padding-bottom-20">
+      <div class="row button-group text-center">
+        <div class="btn button-success">{{correct}}<br>correct</div>
+        <div class="btn button-danger">{{wrong}}<br>wrong</div>
+        <div class="btn button-info">{{pass}}<br>pass</div>
+      </div
+    </div>
+  </div>
+
+  <div class="col-xs-6">
+    <div class="page-title row padding-top-20 padding-bottom-20">
+      <div class="text-center">
+        <div>
+            <h1>Contact Us</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 
 </section>
