@@ -17,8 +17,9 @@ angular
         var data = JSON.parse($attr.data);
         var onPoll = $scope[$attr.onPoll];
 
-        $scope.leftSrc = data.left;
-        $scope.rightSrc = data.right;
+        $scope.leftSrc = data.leftSmall;
+        $scope.rightSrc = data.rightSmall;
+        
         $scope.overlayLeftIconCls = ion_unknown;
         $scope.overlayRightIconCls = ion_unknown;
         $scope.overlayLeftMessage = "enlarge";
@@ -54,7 +55,7 @@ angular
         $scope._enlarge = function(event, isLeft){
           event.preventDefault();
           event.stopPropagation();
-          var link = (isLeft) ? (data.left) : (data.right);
+          var link = (isLeft) ? (data.leftLarge) : (data.rightLarge);
           var target = (isLeft) ? '_leftblank' : '_rightblank';
           $window.open(link, target);
         }

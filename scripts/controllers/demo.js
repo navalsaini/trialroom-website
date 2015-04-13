@@ -18,17 +18,21 @@ angular
     
     // setup vaiables
 
+    var flixBaseSmall = '/images/demo/flix/small/';
+    var flixBaseLarge = '/images/demo/flix/large/';
     var flix = [
-      'images/flix_turing/pic004_billabongfront.jpg',
-      'images/flix_turing/pic005_giants.jpg',
-      'images/flix_turing/pic006_cardinal.jpg'
+      'pic004_billabongfront.jpg',
+      'pic005_giants.jpg',
+      'pic006_cardinal.jpg'
     ];
     shuffle(flix);
     
+    var origBaseSmall = '/images/demo/orig/small/';
+    var origBaseLarge = '/images/demo/orig/large/';
     var orig = [ 
-      'images/orig_turing/pic001.jpg',
-      'images/orig_turing/pic002.jpg',
-      'images/orig_turing/pic003.jpg'
+      'pic001.jpg',
+      'pic002.jpg',
+      'pic003.jpg'
     ];
     shuffle(orig);
 
@@ -37,11 +41,18 @@ angular
     $scope.tests = [];
     for(i=0; i<total; i++){
       var direction = ( Math.round(Math.random()*20) % 2 === 0 );
+      var flixSmall = flixBaseSmall + flix[i];
+      var flixLarge = flixBaseLarge + flix[i];
+      var origSmall = origBaseSmall + orig[i];
+      var origLarge = origBaseLarge + orig[i];
+
       $scope.tests.push({
         idx: i,
         isLeft: direction,
-        left: (direction) ? flix[i] : orig[i],
-        right: (direction) ? orig[i] : flix[i],
+        leftSmall: (direction) ? flixSmall : origSmall,
+        leftLarge: (direction) ? flixLarge : origLarge,
+        rightSmall: (direction) ? origSmall : flixSmall,
+        rightLarge: (direction) ? origLarge : flixLarge,
         isCorrect: null
       });
     }
@@ -55,8 +66,8 @@ angular
 
     // demo first page
 
-    $scope.demoHeaderLImg = flix[0];
-    $scope.demoHeaderRImg = orig[1];
+    $scope.demoHeaderLImg = flixBaseSmall + flix[0];
+    $scope.demoHeaderRImg = origBaseSmall + orig[0];
     $scope.overlayIconCls = "icon ion-help";
     $scope.overlayMessage = "Bot or not";
     $scope.startTest = function(delta){
