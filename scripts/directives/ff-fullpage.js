@@ -6,6 +6,7 @@
         .directive('fullpage', ['$window', FullPage])
 
     var nav,
+        hasNav,
         pageHeight,
         pageIndex,
         pages,
@@ -14,35 +15,13 @@
         scrollEvents;
 
     function FullPage($window){
-        function fullPage($scope, $element, $attr){
-            pages = document.getElementsByClassName($attr.pageClass);
-            nav = document.getElementsByClassName('br-fullpage-nav')[0];
+
+        function fullPagePre($scope, $element, $attr){
             pageHeight = $window.innerHeight;
             scrolling = false;
             onScroll = $scope[$attr.onScroll];
             scrollEvents = !($attr.scroll === "false");
-
-            //retrieve page index from session storage
-            //pageIndex = sessionStorage.getItem('br-fullpage-index');
-            //if (!pageIndex){
-            //    pageIndex = 0;
-            //}
-            pageIndex = 0;
-
-            //add fullpage class
-            angular.element(pages).addClass('br-fullpage');
-
-            //add menu items
-            for (var i = 0; i<pages.length; i++){
-                angular.element(nav).append('<li><i class="br-fullpage-nav-item"></i></li>');
-            }
-
-            //align menu in middle
-            nav.style.marginTop = (0 - (pages.length * 17)) + 'px';
-            angular.element(document.getElementsByClassName('br-fullpage-nav-item')[pageIndex]).addClass('active');
-            angular.element(pages[0]).css(
-                'marginTop', '-' + pageHeight * pageIndex + 'px'
-            );
+            hasNav = !($attr.nav === "false");
 
             //set height
             function setHeight(){
@@ -69,8 +48,10 @@
                     angular.element(pages[0]).css(
                         'marginTop', '-' + pageHeight * pageIndex + 'px'
                     );
-                    angular.element(document.getElementsByClassName('br-fullpage-nav-item')).removeClass('active');
-                    angular.element(document.getElementsByClassName('br-fullpage-nav-item')[pageIndex]).addClass('active');
+                    if(hasNav){
+                      angular.element(document.getElementsByClassName('br-fullpage-nav-item')).removeClass('active');
+                      angular.element(document.getElementsByClassName('br-fullpage-nav-item')[pageIndex]).addClass('active');
+                    }
                     sessionStorage.setItem('br-fullpage-index', pageIndex);
 
                     setTimeout(function () {
@@ -134,11 +115,10 @@
             }
 
             $scope.$on('br-nextpage', function(){
-                paginate(-1);
+              paginate(-1);
             });
 
             if(scrollEvents){
-  
               //Event Bindings
               angular.element(document).bind("mousewheel", mouseScroll); //IE9, Chrome, Safari, Opera
               angular.element(document).bind("onmousewheel", mouseScroll); //IE 6-8
@@ -167,8 +147,38 @@
                   angular.element(document).unbind("MSPointerMove", endTouch); //Mobile
                   angular.element($window).unbind("resize", resize);
               });
-              
             }
+        }
+
+        function fullPagePost($scope, $element, $attr){
+            pages = document.getElementsByClassName($attr.pageClass);
+            
+            //retrieve page index from session storage
+            //pageIndex = sessionStorage.getItem('br-fullpage-index');
+            //if (!pageIndex){
+            //    pageIndex = 0;
+            //}
+            pageIndex = 0;
+
+            //add fullpage class
+            angular.element(pages).addClass('br-fullpage');
+
+            if(hasNav){ 
+              nav = document.getElementsByClassName('br-fullpage-nav')[0];
+
+              //add menu items
+              for (var i = 0; i<pages.length; i++){
+                angular.element(nav).append('<li><i class="br-fullpage-nav-item"></i></li>');
+              }
+
+              //align menu in middle
+              nav.style.marginTop = (0 - (pages.length * 17)) + 'px';
+              angular.element(document.getElementsByClassName('br-fullpage-nav-item')[pageIndex]).addClass('active');
+            }
+
+            angular.element(pages[0]).css(
+               'marginTop', '-' + pageHeight * pageIndex + 'px'
+            );
         }
 
         return {
@@ -180,7 +190,12 @@
             restrict: 'E',
             transclude: true,
             replace: true,
-            link: fullPage
+            compile: function(tElem, tAttrs){
+              return {
+                pre: fullPagePre,
+                post: fullPagePost
+              }
+            }
         }
     }
 })();

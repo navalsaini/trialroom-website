@@ -33,9 +33,9 @@ angular
     shuffle(orig);
 
     var i = 0;
-    var max = Math.min(flix.length, orig.length);
+    var total = Math.min(flix.length, orig.length);
     $scope.tests = [];
-    for(i=0; i<max; i++){
+    for(i=0; i<total; i++){
       var direction = ( Math.round(Math.random()*20) % 2 === 0 );
       $scope.tests.push({
         idx: i,
@@ -45,11 +45,12 @@ angular
         isCorrect: null
       });
     }
-
+    
     $scope.pass = 0;
     $scope.correct = 0;
     $scope.wrong = 0;
-    
+    $scope.showCounter = false;
+
     // demo first page
 
     $scope.demoHeaderLImg = flix[0];
@@ -66,20 +67,21 @@ angular
       // TODO skip the Turing test
     };
 
-    $scope.onPoll = function(idx, isCorrect, isPass){
-        console.log('laksh');
+    $scope.onSkip = function(idx){
+      var test = $scope.tests[idx];
+      $scope.pass++;
+      $scope.doNextPage();
+    };
+
+    $scope.onPoll = function(idx, isCorrect){
       var test = $scope.tests[idx];
       test.isCorrect = isCorrect; 
-      if(isPass){
-        $scope.pass++;
-        $scope.doNextPage();
-      }else if(isCorrect){
+      if(isCorrect){
         $scope.correct++; 
-        $scope.doNextPage(1000);
       }else{
         $scope.wrong++;
-        $scope.doNextPage(1000);
       }
+      $scope.doNextPage(1000);
     };
 
     $scope.doNextPage = function(delta){
@@ -90,6 +92,16 @@ angular
     
     $scope.onPageChange = function(idx){
       // Todo - hide navigation
+      $scope.$apply(function(){
+        if(idx == 0){
+          $scope.showCounter = false;
+        }else if(idx === total+1){
+          $scope.showCounter = false;
+        }else{
+          $scope.indexStr = idx + " of " + total;
+          $scope.showCounter = true;
+        }
+      });
     };
 
   }]);

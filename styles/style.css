@@ -229,6 +229,14 @@ img{
   right: 0;
 }
 
+.zindex-100{
+  z-index:100; 
+}
+
+.zindex-110{
+  z-index:110; 
+}
+
 .no-margin        { margin: 0; }
 .no-margin-left   { margin-left: 0; }
 .no-margin-top    { margin-top: 0; }
