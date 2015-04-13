@@ -91,11 +91,11 @@
 
 
 .ff-correct {
-  color: green;
+  color: palegreen;
 }
 
 .ff-wrong {
-  color: red;
+  color: palevioletred;
 }
 
 /** demo Single **/
