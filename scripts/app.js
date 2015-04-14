@@ -35,6 +35,9 @@ angular
       .when('/contact', {
         templateUrl: 'views/contact.html'
       })
+      .when('/partners', {
+        templateUrl: 'views/partners.html'
+      })
       .otherwise({
         redirectTo: '/'
       });

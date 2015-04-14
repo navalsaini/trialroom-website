@@ -110,11 +110,13 @@ a:active {
   text-decoration: none;
 }
 
+/*
 img{
   vertical-align: middle;
   max-width: 100%;
   height: auto;
 }
+*/
 
 .main-wrapper {
   background-color: white;
@@ -227,6 +229,13 @@ img{
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+.vertically-center-inside-block{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -0.5em;
 }
 
 .zindex-100{
@@ -891,7 +900,7 @@ header {
    * header controller.
    */
 
-  .home, .solution {
+  .home, .solution, .partners {
     background: transparent;
   }
 
@@ -899,7 +908,7 @@ header {
     color: palegoldenrod;
   }
 
-  .clients, .partners, .demo, .contact{
+  .clients, .demo, .contact{
     background: palegoldenrod;
     opacity: 0.7;
   }
@@ -1483,10 +1492,6 @@ header {
   font-size: 4em;
   margin: 0;
   text-shadow: 1px 1px 0 #555;
-  /* 
-  line-height: 1.5em;
-  display: flex; 
-  */
 }
 
 /*
