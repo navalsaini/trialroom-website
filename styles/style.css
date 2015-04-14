@@ -887,6 +887,10 @@ header {
     position: absolute;
   }
 
+  /* These classes are added dynamically from 
+   * header controller.
+   */
+
   .home, .solution {
     background: transparent;
   }
@@ -895,7 +899,7 @@ header {
     color: palegoldenrod;
   }
 
-  .clients, .partners, .demo{
+  .clients, .partners, .demo, .contact{
     background: palegoldenrod;
     opacity: 0.7;
   }
