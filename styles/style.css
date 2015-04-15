@@ -982,7 +982,7 @@ header {
   #logo-region{
     margin: 13px 0px;
     line-height: 1;
-    background: white;
+    /* background: white; */
   }
   #logo-region a img{
     height: 50px;
