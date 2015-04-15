@@ -38,6 +38,10 @@ angular
       .when('/partners', {
         templateUrl: 'views/partners.html'
       })
+      .when('/clients', {
+        templateUrl: 'views/clients.html',
+        controller: 'ClientsCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

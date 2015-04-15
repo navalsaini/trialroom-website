@@ -13,7 +13,9 @@
 /**  - Mav Pills                                            **/
 /**  - Nestor Main Menu                                     **/
 /** Breadcrumbs                                             **/
-/** Profile                                                 **/
+/** Portfolio                                               **/
+/**  - Portfolio Page                                       **/
+/**  - Portfolio Single                                     **/
 /**  - Our Work 1                                           **/
 /** Blog                                                    **/
 /**  - Blog Single                                          **/
@@ -110,14 +112,6 @@ a:active {
   text-decoration: none;
 }
 
-/*
-img{
-  vertical-align: middle;
-  max-width: 100%;
-  height: auto;
-}
-*/
-
 .main-wrapper {
   background-color: white;
   margin: 0 auto;
@@ -157,6 +151,10 @@ img{
 
 .flex-direction-nav{
   display: none;
+}
+
+.section-header-img{
+  height: 500px;
 }
 
 .section-title{
@@ -914,18 +912,14 @@ header {
    * header controller.
    */
 
-  .home, .solution, .partners {
+  .home, .clients, .partners {
     background: transparent;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
   }
 
-  .solution li:not(.active) > a {
-    color: palegoldenrod;
-  }
-
-  .clients, .demo, .contact{
+  .demo, .contact{
     background: palegoldenrod;
     opacity: 0.7;
   }
@@ -1271,10 +1265,74 @@ header {
 
 
 
+
 /*************************************************************/
-/************************* Work *************************/
+/************************* Portfolio *************************/
 /*************************************************************/
 
+/*
+#grid .mix {
+  display: none;
+  opacity: 0;
+}
+*/
+
+/** Portfolio Page **/
+.portfolio-item {
+  margin-top: 40px;
+}
+
+.portfolio-image {
+  position: relative;
+}
+
+.portfolio-image .box {
+  height: 240px;
+}
+
+.portfolio-image img {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.portfolio-overlay {
+  background: rgba(42,197,238,.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.portfolio-image:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-overlay .portfolio-title {
+  color: #f0f0f0;
+  position: absolute;
+  margin: 0;
+  left: 25px;
+  bottom: 20px;
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+/** Portfolio Single **/
+.portfolio-single-image {
+  width: 100%;
+}
 
 /** Our Work 1 **/
 .our-work-1-item {
