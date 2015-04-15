@@ -12,13 +12,13 @@ angular
   .controller('MainCtrl', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll) {
     $scope.slides = [
 	    {
-        title: 'A Bigger Catalog',
+        title: 'Product Photography Made Simple',
         description: 'We are an important part of your vision of selling online.'
       },{
-        title: 'Analytics On Models',
+        title: 'Improve sales with analytics',
         description: 'Change models in catalog images with click of a button.'
       },{
-        title: 'Work Smarter, Spend Lesser',
+        title: 'Reduce costs with automation',
         description: 'Let the cloud do most of your work.'
 	    }
     ];
