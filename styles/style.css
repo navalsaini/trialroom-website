@@ -916,6 +916,9 @@ header {
 
   .home, .solution, .partners {
     background: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
   }
 
   .solution li:not(.active) > a {
