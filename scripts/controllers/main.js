@@ -19,7 +19,7 @@ angular
         description: 'Change models in catalog images with click of a button.'
       },{
         title: 'Reduce costs with automation',
-        description: 'Let the cloud do most of your work.'
+        description: 'Let cloud do most of the work of a photo-studio.'
 	    }
     ];
 
