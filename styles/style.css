@@ -181,13 +181,27 @@ img{
   padding-top:120px;
 }
 
+.padding-bottom-large{
+  padding-bottom:120px;
+}
+
+
 .padding-top-80{
   padding-top:80px;
 }
 
+.padding-bottom-80{
+  padding-bottom:80px;
+}
+
+
 @media (max-width: 991px) {
   .padding-top-large{
     padding-top:80px;
+  }
+
+  .padding-bottom-large{
+    padding-bottom:80px;
   }
 }
 
