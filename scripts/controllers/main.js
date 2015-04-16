@@ -12,14 +12,14 @@ angular
   .controller('MainCtrl', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll) {
     $scope.slides = [
 	    {
-        title: 'Product Photography Made Simple',
-        description: 'We are an important part of your vision of selling online.'
+        title: 'Product photography made simple',
+        description: 'Learn about an algorithm that converts mannequin photoshots into model photoshots.'
       },{
-        title: 'Improve sales with analytics',
-        description: 'Change models in catalog images with click of a button.'
+        title: 'Improve sales',
+        description: 'Switch models on images to increase the appeal in your target audiences.'
       },{
-        title: 'Reduce costs with automation',
-        description: 'Let cloud do most of the work of a photo-studio.'
+        title: 'Reduce costs',
+        description: 'You will never need to hire a model or a high-end photographer again.'
 	    }
     ];
 
