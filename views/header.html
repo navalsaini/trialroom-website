@@ -1,5 +1,5 @@
 <div class="sticky-wrapper" ng-controller="HeaderCtrl">
-  <header class="sticky" ng-class='navClass()'>
+  <header class="sticky" ng-class="[getHidden() , navClass()]">
     <div class="row">
   
       <div id="logo-region" class="logo col-xs-6 col-md-2 text-center-sm">
@@ -21,9 +21,6 @@
           <div style="width:100%;">
             <div class="collapse navbar-collapse navbar-ex1-collapse">
               <ul class="nav navbar-right navbar-nav">
-                <!--li ng-class="isActive('solution')">
-                  <a href="#/solution">Solution</a>
-                </li-->
                 <li ng-class="isActive('clients')">
                   <a href="#/clients">Clients</a>
                 </li>
@@ -31,7 +28,7 @@
                 <a href="#/partners">Studio Partners</a>
                 </li>
                 <li ng-class="isActive('demo')">
-                  <a href="#/demo">Demo</a>
+                  <a href="#/demo">Experience Testing</a>
                 </li>
               </ul>
             </div> <!-- /navbar-collapse -->

@@ -9,8 +9,8 @@
  */
 angular
   .module('flixstockApp')
-  .controller('DemoCtrl', ['$scope', '$location', '$anchorScroll', 
-          function($scope, $location, $anchorScroll) {
+  .controller('DemoCtrl', ['$scope', '$location', '$anchorScroll', 'navService',
+          function($scope, $location, $anchorScroll, navService) {
 
     function shuffle(a,b,c,d){//array,placeholder,placeholder,placeholder
       c=a.length;while(c)b=Math.random()*c--|0,d=a[c],a[c]=a[b],a[b]=d
@@ -108,12 +108,15 @@ angular
       $scope.$apply(function(){
         if(idx == 0){
           $scope.showCounter = false;
+          navService.show();
         }else if(idx === total+1){
           $scope.percentage = Math.round(100 * correct / (correct+wrong+pass));
           $scope.showCounter = false;
+          navService.show();
         }else{
           $scope.indexStr = idx + " of " + total;
           $scope.showCounter = true;
+          navService.hide();
         }
       });
     };
