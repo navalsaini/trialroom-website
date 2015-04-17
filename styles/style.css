@@ -246,11 +246,25 @@ a:active {
 #select-model i{
   font-size: 3em;
   line-height: 2em;
+  color: red;
 }
 
-#select-model a{
-  font-style: italic;
-  padding: 7px 15px;
+#select-model p{
+  color: red;
+}
+
+#solution .panels-1 .panels-item{
+  margin-bottom: 0px;
+}
+
+#benefits .list-unstyled li.highlight{
+  font-weight: 700;
+}
+
+#benefits .list-unstyled li{
+  font-weight: 300;
+  font-size: 1.2em;
+  line-height: 2em;
 }
 
 /*************************************************************/
@@ -805,6 +819,9 @@ ul.tags li:last-child {
   margin-left: 0;
 }
 
+.line-through {
+  text-decoration: line-through;
+}
 
 
 /*************************************************************/

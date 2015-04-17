@@ -9,7 +9,8 @@
  */
 angular
   .module('flixstockApp')
-  .controller('MainCtrl', ['$scope', '$location', '$anchorScroll', function($scope, $location, $anchorScroll) {
+  .controller('MainCtrl', ['$scope', '$location', '$anchorScroll', '$interval',
+          function($scope, $location, $anchorScroll, $interval) {
     $scope.slides = [
 	    {
         title: 'Product photography made simple',
@@ -27,4 +28,12 @@ angular
       $location.hash('solution');
       $anchorScroll();
     };
+
+    $scope.images = [
+      "images/solution/model1.jpg",
+      "images/solution/model2.jpg",
+      "images/solution/model3.jpg"
+    ];
+
+    $scope.garment = "images/solution/garment1.png";
   }]);
