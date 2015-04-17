@@ -1,32 +1,35 @@
-<div class="row imagepoll-intro">
+<div class="row imagepoll-block">
   <div class="col-xs-12">
     <div class="row">
-        <div class="imagepoll-image col-xs-6">
+      <div class="imagepoll-image imagepoll-left col-xs-6">
         <img class="img-responsive" ng-src="{{leftSrc}}"/>
         <div class="imagepoll-overlay" ng-click="_select(true)">
           <div class="imagepoll-icon">
             <i class="{{overlayLeftIconCls}}"></i>
           </div> 
           <div class="imagepoll-title">
-              <h6 ng-click="_enlarge($event,true)">
-                {{overlayLeftMessage}}
-              </h6>
+            <h6>
+              {{overlayLeftMessage}}
+            </h6>
           </div> 
         </div>
       </div> <!-- /imagepoll-image -->
-      <div class="imagepoll-image col-xs-6">
+      <div class="imagepoll-image imagepoll-right col-xs-6">
         <img class="img-responsive" ng-src="{{rightSrc}}"/>
         <div class="imagepoll-overlay" ng-click="_select(false)">
           <div class="imagepoll-icon">
             <i class="{{overlayRightIconCls}}"></i>
           </div> 
           <div class="imagepoll-title">
-            <h6 ng-click="_enlarge($event,false)">
+            <h6>
               {{overlayRightMessage}}
             </h6>
           </div> 
         </div>
       </div> <!-- /imagepoll-image -->
+      <div class="imagepoll-center">
+        <h6>or</h6>
+      </div>
     </div>
   </div>
 </div>

@@ -68,8 +68,6 @@ angular
 
     $scope.demoHeaderLImg = flixBaseSmall + flix[0];
     $scope.demoHeaderRImg = origBaseSmall + orig[0];
-    $scope.overlayIconCls = "icon ion-help";
-    $scope.overlayMessage = "Bot or not";
     $scope.startTest = function(delta){
       $scope.overlayIconCls = "icon ion-arrow-down-a";
       $scope.overlayMessage = "Go";

@@ -8,11 +8,13 @@ angular
       replace: true,
       templateUrl: 'views/templates/ff-imagepoll.html',
       link: function($scope, $element, $attr){
-        var ion_unknown = "icon ion-help";
+        //var ion_unknown = "icon ion-help";
+        var ion_unknown = "";
         var ion_correct_answer = "icon ion-checkmark-round ff-correct";
         var isAnswered = false;
         var correctMessage = "You caught us";
-        var wrongMessage = "Flixstock";
+        var wrongMessage = "Oops...";
+        var initialMessage = "Flixstock";
 
         var data = JSON.parse($attr.data);
         var onPoll = $scope[$attr.onPoll];
@@ -22,8 +24,8 @@ angular
         
         $scope.overlayLeftIconCls = ion_unknown;
         $scope.overlayRightIconCls = ion_unknown;
-        $scope.overlayLeftMessage = "enlarge";
-        $scope.overlayRightMessage = "enlarge";
+        $scope.overlayLeftMessage = initialMessage;
+        $scope.overlayRightMessage = initialMessage;
 
         $scope._select = function(isLeft){
           if(isAnswered){

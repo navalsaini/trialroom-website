@@ -21,37 +21,26 @@
           </div>
           <div class="top-content-right col-xs-12 col-md-6 text-right text-center-sm margin-top-sm-10">
             <div class="text-center">
-              <a ng-click="startTest()" class="btn btn-primary">Test us now !</a>
+              <a ng-click="startTest()" class="btn btn-primary">Start the test!</a>
               <a ng-href="#/contact" class="btn btn-primary" style="border:0;">Get in touch</a>
             </div> <!-- /row -->
           </div>
         </div>
     
-        <div class="row imagepoll-intro">
+        <div class="row imagepoll-block">
           <div class="col-xs-12">
             <div class="row">
-              <div class="imagepoll-image col-xs-6">
-                <img class="img-responsive" ng-src="{{demoHeaderLImg}}"/>
-                <div class="imagepoll-overlay" ng-click="startTest(1000)" >
-                  <div class="imagepoll-icon">
-                      <i class="{{overlayIconCls}}"></i>
-                  </div> 
-                  <div class="imagepoll-title">
-                      <h6>{{overlayMessage}}</h6>
-                  </div> 
+              <div class="imagepoll-image">
+                <div class="col-xs-6">
+                  <img class="img-responsive" ng-src="{{demoHeaderLImg}}"/>
+                </div> <!-- /imagepoll-image -->
+                <div class="col-xs-6">
+                  <img class="img-responsive" ng-src="{{demoHeaderRImg}}" />
                 </div>
               </div> <!-- /imagepoll-image -->
-              <div class="imagepoll-image col-xs-6">
-                <img class="img-responsive" ng-src="{{demoHeaderRImg}}" />
-                <div class="imagepoll-overlay" ng-click="startTest(1000)">
-                  <div class="imagepoll-icon">
-                      <i class="{{overlayIconCls}}"></i>
-                  </div> 
-                  <div class="imagepoll-title">
-                      <h6>{{overlayMessage}}</h6>
-                  </div> 
-                </div>
-              </div> <!-- /imagepoll-image -->
+              <div class="imagepoll-center">
+                  <h6>or</h6>
+              </div>
             </div>
           </div>
         </div>
