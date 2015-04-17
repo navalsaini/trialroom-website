@@ -821,6 +821,8 @@ ul.tags li:last-child {
 
 .line-through {
   text-decoration: line-through;
+  font-weight: lighter !important;
+  color: darkgrey;
 }
 
 
