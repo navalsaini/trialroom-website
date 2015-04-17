@@ -231,7 +231,27 @@ a:active {
   text-align: center;
 }
 
+.solution-images{
+ display: inline-flex;
+}
 
+#select-model{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  text-align: center;
+  margin-top: -3em;
+}
+
+#select-model i{
+  font-size: 3em;
+  line-height: 2em;
+}
+
+#select-model a{
+  font-style: italic;
+  padding: 7px 15px;
+}
 
 /*************************************************************/
 /*********************** Generic Styles **********************/

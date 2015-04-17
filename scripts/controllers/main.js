@@ -23,8 +23,8 @@ angular
 	    }
     ];
 
-    $scope.gotoBenefits = function(){
-      $location.hash('benefits');
+    $scope.gotoSolution = function(){
+      $location.hash('solution');
       $anchorScroll();
     };
   }]);

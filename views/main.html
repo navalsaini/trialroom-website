@@ -11,7 +11,7 @@
 		      			  </span>
 		      			</div>
 		      			<p class="slider-description">{{s.description}}</p>
-		      			<a ng-click='gotoBenefits()' class="btn btn-default">How it works</a>
+		      			<a ng-click='gotoSolution()' class="btn btn-default">How it works</a>
 		      			<a href="#/demo" class="btn btn-primary">Compare our images</a>
 		      		</li>
 		        </flex-slider>
@@ -21,56 +21,40 @@
 	</div> <!-- /highlighted-slider-1-block -->
 </section> <!-- /highlighted-region -->
 
-
-<section id="benefits" class="content region padding-top-large">
+<section id="solution" class="content region padding-top-large">
 
 	<div class="panels-1 block">
 	  <div class="container">
 	    <div class="row">
-	      <h2 class="section-title padding-bottom-large">
+	      <h2 class="section-title padding-bottom-20">
 	      	Our Solution
-	      </h2>	
-	      
-	      <div class="panels-item col-xs-12 col-md-4">
-	        <i class="icon ion-woman text-color-theme"></i>
-	        <h6>SELECT MODELS</h6>
-	        <p>Select from our catalogue of models.</p>
-	      </div> <!-- /panels-item -->
-	      
-	      <div class="panels-item col-xs-12 col-md-4">
-	        <i class="icon ion-android-camera text-color-theme"></i>
+          </h2>
+        </div>
+        
+        <div class="row solution-images">
+	    
+          <div class="panels-item col-xs-12 col-md-4">
 	        <h6>PHOTOSHOOT MANNEQUINS</h6>
 	        <p>Mannequin photoshoots are trivial compared to a model photoshoot.</p>
+            <img class="img-responsive" ng-src="images/solution/garment.png" />
+	      </div> <!-- /panels-item -->
+          
+          <div class="panels-item col-xs-12 col-md-4">
+	        <h6>SELECT MODELS</h6>
+            <p>Select from our catalogue of models.<br>
+            <div id="select-model"> 
+              <i class="icon ion-android-camera"></i>
+		      <a class="btn btn-default">Click! Next Model.</a>
+            </div>
 	      </div> <!-- /panels-item -->
 	      
 	      <div class="panels-item col-xs-12 col-md-4">
-	        <i class="icon ion-images text-color-theme"></i>
-	        <h6>SEND US IMAGES</h6>
-	        <p>We check if the image parameters matches our criteria (lighting, shadows, etc).</p>
-	      </div> <!-- /panels-item -->
-
-	      <div class="panels-item col-xs-12 col-md-4">
-	        <i class="icon ion-arrow-expand text-color-theme"></i>
-	        <h6>FIT GARMENTS</h6>
-	        <p>The Flixstock algorithm fits garments on selected model silhouettes.</p>
-	      </div> <!-- /panels-item -->
-
-	      <div class="panels-item col-xs-12 col-md-4">
-	        <i class="icon ion-checkmark-circled text-color-theme"></i>
 	        <h6>QUALITY CHECK</h6>
-	        <p><b>Photoshop experts</b> quality check each and every Flixstock image.</p>
+	        <p>We quality check each and every Flixstock image.</p>
+            <img class="img-responsive" ng-src="images/solution/model1.jpg" />
 	      </div> <!-- /panels-item -->
 	    
-	      <div class="panels-item col-xs-12 col-md-4">
-	        <i class="icon ion-social-dropbox text-color-theme"></i>
-	        <h6>CATALOG READY</h6>
-	        <p>The whole process at Flixstock takes one hour to a few hours.</p>
-	      </div> <!-- /panels-item -->
 	    </div> <!-- /row -->
-
-	    <div class="row text-center">
-		   <a href="#/solution" class="btn btn-primary">Learn More</a>
-		</div> <!-- /row -->
 
 	  </div> <!-- /container -->    
 	</div> <!-- /panels-1-block -->
