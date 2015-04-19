@@ -3,7 +3,7 @@
 	  <div class="overlay overlay-30">
 	    <div class="flex-bullet-slider vertical-center text-center">
 	      	<centered>
-		      	<flex-slider slide="s in slides track by $index" animation="fade" animationSpeed="10000" >
+		      	<flex-slider slide="s in slides track by $index" animation="fade" slideshow-speed="10000" pauseOnHover="true" direction-nav="false">
 		      		<li>
 		      			<div class="slider-title">
 		      			  <span>
@@ -34,14 +34,14 @@
         <div class="row solution-images">
 	    
           <div class="panels-item col-xs-12 col-md-4">
-	        <h6>PHOTOSHOOT MANNEQUINS</h6>
-	        <p>Mannequin photoshoots are trivial compared to a model photoshoot.</p>
+	        <h6>SHOOT THE PRODUCT</h6>
+	        <p>Product photoshoots are done on Mannequins and are much trivial compared to a model photoshoot.</p>
             <img class="img-responsive" ng-src="{{garment}}" />
 	      </div> <!-- /panels-item -->
           
           <div class="panels-item col-xs-12 col-md-4">
-	        <h6>SELECT MODELS</h6>
-            <p>Select from our catalogue of 100+ models or use with your models.<br>
+	        <h6>SHOOT THE MODEL</h6>
+            <p>Models are photographed separately and you can select from our catalogue of models aswell.<br>
             <div id="select-model"> 
               <i class="icon ion-android-camera"></i>
               <p>Click..Pick..Models</p>
@@ -49,9 +49,9 @@
 	      </div> <!-- /panels-item -->
 	      
 	      <div class="panels-item col-xs-12 col-md-4">
-	        <h6>QUALITY CHECK</h6>
-	        <p>We quality check each and every Flixstock image.</p>
-		    <flex-slider slide="img in images track by $index" animation="slide" animationSpeed="1500" control-nav="false" >
+	        <h6>CATALOG IMAGES</h6>
+	        <p>We quality check each and every Flixstock generated image.</p>
+		    <flex-slider slide="img in images track by $index" animation="slide" slideshow-speed="1500" control-nav="false" direction-nav="false" >
 		      <li>
                 <img class="img-responsive" ng-src="{{img}}" />
               </li>
@@ -132,10 +132,69 @@
 	    
 </section>
 
-<section class="content region padding-top-large bg-color-theme text-color-light">
-  <div class="footer">
-    <div class="container text-center">
-      <p><span class="glyphicon glyphicon-heart"></span> FlixStock 2015</p>
-    </div> <!-- /container -->  
+<section id="testimonials" class="content region bg-image-client text-color-light">
+  <div class="testimonials-1">
+     <div class="container">
+       <div class="row">
+         <div class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+              <span class="icon ion-ios7-chatbubble-outline testimonials-1-icon text-color-theme">
+              <p class="size-32">A few letters of appreciation</p>
+              </span>
+             <flex-slider slide="t in testimonials track by $index" animation="none" 
+                          slideshow-speed="20000" slideshow="false" pauseOnHover="true"
+                          control-nav="false" direction-nav="true" prev-text="" next-text="">
+               <li>
+                 <h4 class="testimonials-1-text lato-font">
+                   {{t.testimonial}}
+                 </h4>
+                 <p class="testimonials-1-author text-color-theme">
+                   {{t.person}}
+                 </p>
+                 <p>
+                   <a href="{{t.url}}" target="_blank">
+                     <i>
+                       {{t.company}}
+                     </i>
+                   </a>
+                 </p>
+               </li>
+             </flex-slider>
+         </div>
+       </div>
+     </div>
   </div>
 </section>
+
+<section class="content region padding-top-large bg-color-theme text-color-light">
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-first-column col-xs-12 col-md-4 text-center">
+            <div class="footer-address block">
+              <i class="icon ion-ios7-location-outline size-32 margin-bottom-20"></i>
+              <p>New Delhi, India</p>
+            </div> <!-- /footer-address-block -->
+        </div> <!-- /footer-first-column-region -->
+        
+        <div id="footer-second-column-region" class="footer-second-column col-xs-12 col-md-4 text-center">
+            <div class="footer-mail block">
+              <i class="icon ion-ios7-email-outline size-32 margin-bottom-20"></i>
+              <p><a href="mailto:contact@flixstock.com">contact@flixstock.com</a></p>
+            </div> <!-- /footer-mail-block -->
+        </div>  <!-- /footer-second-column-region -->
+
+        <div id="footer-third-column-region" class="footer-third-column col-xs-12 col-md-4 text-center">
+            <div class="footer-phone block">
+              <i class="icon ion-ios7-telephone-outline size-32 margin-bottom-20"></i>
+              <p>1-(949)-945-2046</p>
+            </div> <!-- /footer-phone-block -->
+        </div>  <!-- /footer-third-column-region -->
+
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </div> <!-- /container -->  
+</section>
+
+
+
+

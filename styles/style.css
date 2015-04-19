@@ -90,8 +90,7 @@ body {
   color: #777;
   font-size: 1.6em;
   line-height: 1.6em;
-  /* font-family: 'Lato', sans-serif; */
-  font-family: "'Open Sans',HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif";
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
@@ -131,15 +130,28 @@ a:active {
 
 }
 
-/*
 .flex-direction-nav a {
   opacity: 1.0;
-  color: white;
   height: auto;
   overflow: visible;
-  margin: 0px;
+  top: 30%;
 }
 
+.flex-direction-nav a:before{
+  color: white;
+}
+
+.flexslider .flex-direction-nav .flex-prev,
+.flexslider:hover .flex-direction-nav .flex-prev{
+  left:-80px;
+}
+
+.flexslider .flex-direction-nav .flex-next,
+.flexslider:hover .flex-direction-nav .flex-next{
+  right:-80px;
+}
+
+/*
 .flex-direction-nav .flex-prev{
   left: 10px;
 }
@@ -148,10 +160,6 @@ a:active {
   right: 10px;
 }
 */
-
-.flex-direction-nav{
-  display: none;
-}
 
 .section-header-img{
   height: 500px;
@@ -265,6 +273,11 @@ a:active {
   font-weight: 300;
   font-size: 1.2em;
   line-height: 2em;
+}
+
+#benefits .line-through {
+  font-weight: lighter !important;
+  color: darkgrey;
 }
 
 /*************************************************************/
@@ -821,8 +834,6 @@ ul.tags li:last-child {
 
 .line-through {
   text-decoration: line-through;
-  font-weight: lighter !important;
-  color: darkgrey;
 }
 
 
@@ -1200,10 +1211,7 @@ header {
 
 @media (min-width: 992px) {
   .nav > li > a{
-    font-size: 1.2em;
     color: white;
-    opacity: 0.9;
-    font-weight: normal;
   }
 }
 
@@ -1955,6 +1963,7 @@ header {
 .testimonials-1 .testimonials-1-text {
   line-height: 1.8em;
   font-weight: 100;
+  text-align: left;
 }
 
 .testimonials-1 .testimonials-1-author {
@@ -3194,6 +3203,14 @@ input[type="number"] {
 
 .bg-image-collage {
   background: url('../images/background-images/collage.jpg') scroll center no-repeat;
+  -webkit-background-size: cover; 
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+.bg-image-client {
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/background-images/client.jpg') scroll center no-repeat;
   -webkit-background-size: cover; 
      -moz-background-size: cover;
        -o-background-size: cover;

@@ -1,6 +1,12 @@
 
 /** imagepoll directive **/
 
+.flexslider{
+  border: 0px;
+  background: transparent;
+  margin: 0px;
+}
+
 .imagepoll-block .imagepoll-center{
   position: absolute;
   top: 50%;

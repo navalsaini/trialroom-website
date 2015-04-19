@@ -20,21 +20,24 @@ angular
 
     var flixBaseSmall = '/images/demo/flix/small/';
     var flixBaseLarge = '/images/demo/flix/large/';
+    var origBaseSmall = '/images/demo/orig/small/';
+    var origBaseLarge = '/images/demo/orig/large/';
+   
+    // images - maintain order
+
     var flix = [
       'pic004_billabongfront.jpg',
       'pic005_giants.jpg',
       'pic006_cardinal.jpg'
     ];
-    shuffle(flix);
-    
-    var origBaseSmall = '/images/demo/orig/small/';
-    var origBaseLarge = '/images/demo/orig/large/';
     var orig = [ 
-      'pic001.jpg',
+      'pic003.jpg',
       'pic002.jpg',
-      'pic003.jpg'
+      'pic001.jpg'
     ];
-    shuffle(orig);
+    
+    //shuffle(flix);
+    //shuffle(orig);
 
     var i = 0;
     var total = Math.min(flix.length, orig.length);
