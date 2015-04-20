@@ -14,7 +14,7 @@ angular
     $scope.slides = [
 	    {
         title: 'Product photography made simple',
-        description: 'We convert product photoshots into model photoshots.'
+        description: 'We convert product photoshoots into model photoshoots.'
       },{
         title: 'Improve sales',
         description: 'Switch models on images to increase the appeal in your target audiences.'
