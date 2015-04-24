@@ -13,14 +13,14 @@ angular
           function($scope, $location, $anchorScroll, $interval) {
     $scope.slides = [
 	    {
-        title: 'Product photography made simple',
-        description: 'We convert product photoshoots into model photoshoots.'
+        title: 'Apparel catalog photography made simple',
+        description: 'Replace your traditional photo-shoot with tech driven photography.'
       },{
         title: 'Improve sales',
-        description: 'Switch models on images to increase the appeal in your target audiences.'
+        description: 'Act on which models sell more - make use of analytics.'
       },{
         title: 'Reduce costs',
-        description: 'You will never need to hire a model or a high-end photographer again.'
+        description: 'You will never need to hire a model or a high end photographer again.'
 	    }
     ];
 

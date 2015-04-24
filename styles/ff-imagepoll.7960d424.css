@@ -27,7 +27,7 @@
   height: 2px;
   width: 15px;
   margin: 10px auto 20px;
-  background: palegoldenrod;
+  background: cadetblue;
 }
 
 
@@ -55,7 +55,7 @@
   left: 0;
   right: 0;
   opacity: 0;
-  color: palegoldenrod;
+  color: cadetblue;
   -webkit-transition: all 0.3s ease-out;
      -moz-transition: all 0.3s ease-out;
        -o-transition: all 0.3s ease-out;
@@ -110,7 +110,7 @@
   font-style: italic;
   font-weight: 900;
   font-size: 2em;
-  background-color: palegoldenrod;
+  background-color: cadetblue;
   padding: 0 10px;
   line-height: 1.6em;
   border-radius: 0.8em;

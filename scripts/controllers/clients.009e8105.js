@@ -15,12 +15,16 @@ angular
         img: "Adasa.jpg" 
       },{
         img: "Stylebug.jpg"
-      },{
-        img: "Fanatics.jpg"
-	  },{
-        img: "Navabi.png"
+      //},{
+      //  img: "Fanatics.jpg"
+	  //},{
+      //  img: "Navabi.png"
       },{
         img: "CoutureCandy.jpg"
+      },{
+        img: "Kimaya.png"
+      },{
+        img: "Indianroots.png"
       }
     ];
   }]);
