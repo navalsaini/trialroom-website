@@ -3279,9 +3279,10 @@ input[type="number"] {
 */
 
 
+
 @media screen and (max-device-width: 480px) and (orientation:portrait) {
+  .angular-center-container,
   #introduction > .highlighted-slider-1 {
-    max-height: 500px;
+    height: 100%;
   }
 } 
-
