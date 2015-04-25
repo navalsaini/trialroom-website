@@ -239,16 +239,8 @@ a:active {
   text-align: center;
 }
 
-.solution-images{
- display: inline-flex;
-}
-
 #select-model{
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  text-align: center;
-  margin-top: -3em;
+  padding-top: 150px;
 }
 
 #select-model i{
@@ -261,8 +253,14 @@ a:active {
   color: red;
 }
 
-#solution .panels-1 .panels-item{
-  margin-bottom: 0px;
+@media (min-width: 992px) {
+  #solution .panels-item{
+    margin-bottom: 0px;
+  }
+}
+
+#solution .panels-3 .panels-item{
+  text-align: center;
 }
 
 #benefits .list-unstyled li.highlight{
@@ -278,6 +276,20 @@ a:active {
 #benefits .line-through {
   font-weight: lighter !important;
   color: darkgrey;
+}
+
+.demo-expland {
+  position: absolute;
+  opacity: 0.3;
+  color: cadetblue;
+}
+
+.demo-expland-left {
+  left: 5%;
+}
+
+.demo-expland-right {
+  right: 5%;
 }
 
 /*************************************************************/
@@ -703,6 +715,8 @@ a:active {
 }
 
 .position-relative { position: relative; }
+
+.full-height { height: 100%; }
 
 .img-responsive { display: inline-block; }
 .img-full-width { width: 100%; }
@@ -3209,8 +3223,16 @@ input[type="number"] {
           background-size: cover;
 }
 
-.bg-image-client {
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/header-clients.jpg') scroll center no-repeat;
+.bg-image-ecom {
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/background-images/header-clients.jpg') scroll center no-repeat;
+  -webkit-background-size: cover; 
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+.bg-image-studio {
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../images/background-images/header-studio.jpg') scroll center no-repeat;
   -webkit-background-size: cover; 
      -moz-background-size: cover;
        -o-background-size: cover;
