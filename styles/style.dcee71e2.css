@@ -3246,7 +3246,7 @@ input[type="number"] {
 .bg-pattern-witewall_3             { background: url('../images/patterns/witewall_3.png') scroll 0 0 repeat; }
 
 .bg-image-collage {
-  background: url('../images/background-images/collage.jpg') scroll center no-repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../images/background-images/collage.jpg') scroll center no-repeat;
   -webkit-background-size: cover; 
      -moz-background-size: cover;
        -o-background-size: cover;
