@@ -3278,3 +3278,10 @@ input[type="number"] {
 }
 */
 
+
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+  .bg-image-collage {
+    max-height: 500px;
+  }
+} 
+
