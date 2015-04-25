@@ -3280,7 +3280,7 @@ input[type="number"] {
 
 
 @media screen and (max-device-width: 480px) and (orientation:portrait) {
-  #introduction {
+  #introduction > .highlighted-slider-1 {
     max-height: 500px;
   }
 } 
