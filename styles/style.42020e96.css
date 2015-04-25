@@ -1649,11 +1649,13 @@ header {
   position: relative;
 }
 
+/*
 @media (max-width: 767px) {
   .highlighted-slider-1 {
     font-size: 0.5em;
   }
 }
+*/
 
 .highlighted-slider-1 .slider-title {
   font-size: 4em;
@@ -3278,11 +3280,18 @@ input[type="number"] {
 }
 */
 
-
+/* workaround for iphone 4s problem
+ * 100vh is much larger than 100%
+ */
 
 @media screen and (max-device-width: 480px) and (orientation:portrait) {
   .angular-center-container,
   #introduction > .highlighted-slider-1 {
     max-height: 480px;
   }
+
+  .hidden-iphone{
+    display: none;
+  }
 } 
+
