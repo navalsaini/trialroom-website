@@ -211,6 +211,16 @@ a:active {
   }
 }
 
+@media (max-width: 767px) {
+  .padding-top-large{
+    padding-top:40px;
+  }
+
+  .padding-bottom-large{
+    padding-bottom:40px;
+  }
+}
+
 .page {
   height: 100vh;
 }
@@ -912,12 +922,18 @@ ul.tags li:last-child {
 }
 
 header {
-  background-color: #fff;
+  background: transparent;
   position: fixed;
   
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  /*
   -webkit-box-shadow: 0 0 4px #cdcdcd;
   -moz-box-shadow: 0 0 4px #cdcdcd;
   box-shadow: 0 0 4px #cdcdcd;
+  */
 
   padding: 0 40px;
   box-sizing: border-box;
@@ -967,7 +983,7 @@ header {
 
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   header{
     position: absolute;
   }
@@ -976,12 +992,6 @@ header {
    * header controller.
    */
 
-  .home, .clients, .partners {
-    background: transparent;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-  }
 
   .demo, .contact{
     background: cadetblue;
@@ -1154,8 +1164,22 @@ header {
 .nestor-main-menu .nav > li > a:focus,
 .nestor-main-menu .nav > li:hover > a,
 .nestor-main-menu .nav > li:focus > a {
-  color: #777;
+  color: white;
   background-color: transparent;
+}
+
+@media (max-width: 767px) {
+  .nestor-main-menu a,
+  .nestor-main-menu .active > a,
+  .nestor-main-menu .nav .open > a,
+  .nestor-main-menu .nav .open > a:hover,
+  .nestor-main-menu .nav .open > a:focus,
+  .nestor-main-menu .nav > li > a:hover,
+  .nestor-main-menu .nav > li > a:focus,
+  .nestor-main-menu .nav > li:hover > a,
+  .nestor-main-menu .nav > li:focus > a {
+    background: cadetblue;
+  }
 }
 
 .nestor-main-menu .dropdown-menu {
@@ -1623,6 +1647,12 @@ header {
   height: 100vh;
   width: 100%;
   position: relative;
+}
+
+@media (max-width: 767px) {
+  .highlighted-slider-1 {
+    font-size: 0.5em;
+  }
 }
 
 .highlighted-slider-1 .slider-title {

@@ -16,7 +16,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'angular-flexslider',
-    'br.fullpage'
+    'br.fullpage',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider

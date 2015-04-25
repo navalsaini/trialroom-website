@@ -54,6 +54,7 @@ angular
           }
         }
 
+        /*
         $scope._enlarge = function(event, isLeft){
           event.preventDefault();
           event.stopPropagation();
@@ -61,6 +62,7 @@ angular
           var target = (isLeft) ? '_leftblank' : '_rightblank';
           $window.open(link, target);
         }
+        */
       }
     };
   }]);

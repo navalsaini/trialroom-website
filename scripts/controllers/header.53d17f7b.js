@@ -33,5 +33,4 @@ angular
       $scope.getHidden = function(){
         return isHidden ? "hidden" : "";
       };
-
   }]);
