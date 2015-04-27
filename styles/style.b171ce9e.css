@@ -3276,7 +3276,7 @@ input[type="number"] {
  * 100vh is much larger than 100%
  */
 
-@media screen and (max-device-width: 480px) and (orientation:portrait) {
+@media screen and (max-device-width: 480px) {
   .angular-center-container,
   #introduction > .highlighted-slider-1 {
     max-height: 480px;
@@ -3289,5 +3289,11 @@ input[type="number"] {
   .highlighted-slider-1 {
     font-size: 0.5em;
   }
-} 
+}
+
+@media screen and (min-device-width: 480px) {
+  .show-iphone{
+    display: none;
+  }
+}
 
