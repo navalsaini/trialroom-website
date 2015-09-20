@@ -167,10 +167,23 @@ a:active {
 
 .section-title{
   margin: 0;
-  font-size: 41px;
-  line-height: 70px;
+  font-size: 2em;
+  line-height: 3em;
   font-weight: 700;
   text-align: center;
+}
+
+.section-description{
+  margin: 0;
+  font-size: 1.25em;
+  line-height: 2em;
+  font-weight: 400;
+  text-align: left;
+}
+
+.section-image {
+  width: 100%;
+  height: auto;
 }
 
 .section-title:after {
@@ -227,6 +240,7 @@ a:active {
     
 .page:nth-child(2n){
     background-color: #99c;
+    color: #2b2b2b;
 }
 
 /*
@@ -922,7 +936,7 @@ ul.tags li:last-child {
 }
 
 header {
-  background: transparent;
+  background: white;
   position: fixed;
   
   -webkit-box-shadow: none;
@@ -991,12 +1005,6 @@ header {
   /* These classes are added dynamically from 
    * header controller.
    */
-
-
-  .demo, .contact{
-    background: cadetblue;
-    opacity: 0.7;
-  }
 }
 
 .header-1 .nestor-main-menu {
@@ -1020,6 +1028,7 @@ header {
   float: none!important;
   display: inline-block;
 }
+
 
 .header-1 .nestor-main-menu .navbar-collapse .navbar-nav.navbar-right:last-child {
   margin-right: 0;
@@ -1138,7 +1147,9 @@ header {
 }
 
 .nestor-main-menu .nav > li > a {
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
+  color: black;
+  font-size: 1.25em;
 }
 
 .nestor-main-menu .nav > li:last-child > a {
@@ -1164,7 +1175,6 @@ header {
 .nestor-main-menu .nav > li > a:focus,
 .nestor-main-menu .nav > li:hover > a,
 .nestor-main-menu .nav > li:focus > a {
-  color: white;
   background-color: transparent;
 }
 
@@ -1245,12 +1255,6 @@ header {
     margin-right: 0;
   }
 
-}
-
-@media (min-width: 992px) {
-  .nav > li > a{
-    color: white;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1649,10 +1653,14 @@ header {
   position: relative;
 }
 
+.highlighted-slider-1 .slider-content {
+  top: 80%;
+}
+
 .highlighted-slider-1 .slider-title {
   font-size: 4em;
+  color: black;
   margin: 0;
-  text-shadow: 1px 1px 0 #555;
 }
 
 /*
@@ -1696,12 +1704,6 @@ header {
 .highlighted-slider-2 .slider-title {
   font-size: 4em;
   margin: 0;
-  text-shadow: 1px 1px 0 #555;
-}
-
-.highlighted-slider-2 .slider-description {
-  margin: 2em 0;
-  font-size: 1.1em;
   text-shadow: 1px 1px 0 #555;
 }
 
@@ -1816,21 +1818,17 @@ header {
 
 /** Panels 1 **/
 .panels-1 .panels-item {
-  margin-bottom: 60px;
-}
-
-.panels-1 .panels-item i {
-  font-size: 32px;
-  display: block;
-  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.1em;
 }
 
 .panels-1 .panels-item h6 {
-  text-align: center;
+  text-align: left;
 }
 
 .panels-1 .panels-item p {
-  text-align: center;
+  text-align: left;
+  line-height: 2em;
 }
 
 @media (max-width: 991px) {
@@ -3240,19 +3238,19 @@ input[type="number"] {
 .bg-pattern-witewall_3             { background: url('../images/patterns/witewall_3.png') scroll 0 0 repeat; }
 
 .bg-image-collage {
-  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../images/background-images/collage.jpg') scroll center no-repeat;
-  -webkit-background-size: cover; 
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
+  background: linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) ), url('../images/background-images/collage.jpg') scroll center no-repeat;
+  -webkit-background-size: initial; 
+     -moz-background-size: initial;
+       -o-background-size: initial;
+          background-size: initial;
 }
 
 .bg-image-ecom {
   background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../images/background-images/header-clients.jpg') scroll center no-repeat;
-  -webkit-background-size: cover; 
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
+  -webkit-background-size: 100% 80%; 
+     -moz-background-size: 100% 80%;
+       -o-background-size: 100% 80%;
+          background-size: 100% 80%;
 }
 
 .bg-image-studio {
@@ -3297,3 +3295,21 @@ input[type="number"] {
   }
 }
 
+#solution-page .page .container {
+  padding: 40px;
+}
+
+#solution-page .page .container:nth-child(odd) > h1{
+  color: #444;
+}
+
+#solution-page .page .container > h4 {
+  line-height: 2em;
+}
+
+#solution-page .attribution {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: .5em;
+}

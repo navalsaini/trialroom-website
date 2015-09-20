@@ -29,6 +29,7 @@ angular
         templateUrl: 'views/solution.html',
         controller: 'SolutionCtrl'
       })
+/*
       .when('/demo', {
         templateUrl: 'views/demo.html',
         controller: 'DemoCtrl'
@@ -43,6 +44,7 @@ angular
         templateUrl: 'views/clients.html',
         controller: 'ClientsCtrl'
       })
+*/
       .otherwise({
         redirectTo: '/'
       });
